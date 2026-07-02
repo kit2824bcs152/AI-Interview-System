@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Interview Simulator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Mock interview practice</p>
+          <h1>Realistic interview coaching for job seekers</h1>
+          <p class="subtitle">
+            Practice with role-based questions, receive structured feedback on your
+            delivery, and build confidence before a real interview.
+          </p>
+        </div>
+      </header>
+
+      <main class="layout">
+        <section class="panel controls">
+          <label for="role">Choose a role</label>
+          <select id="role">
+            <option value="software-engineer">💻 Software Engineer</option>
+            <option value="product-manager">📈 Product Manager</option>
+            <option value="data-analyst">📊 Data Analyst</option>
+            <option value="frontend-developer">🎨 Frontend Developer</option>
+            <option value="backend-developer">🛠️ Backend Developer</option>
+            <option value="ui-ux-designer">🧩 UI/UX Designer</option>
+            <option value="sales-executive">💼 Sales Executive</option>
+          </select>
+
+          <label for="difficulty">Difficulty</label>
+          <select id="difficulty">
+            <option value="starter">🟢 Starter</option>
+            <option value="mid">🟠 Mid-Level</option>
+            <option value="advanced">🔴 Advanced</option>
+          </select>
+
+          <div class="info-card">
+            <h3>What this simulates</h3>
+            <ul>
+              <li>Realistic interview questions</li>
+              <li>Structured response coaching</li>
+              <li>Confidence and tone guidance</li>
+            </ul>
+          </div>
+
+          <button id="startBtn">Start Interview</button>
+        </section>
+
+        <section class="panel interview">
+          <div class="progress-row">
+            <span id="progressLabel">Question 1 of 5</span>
+            <div class="progress-bar">
+              <div id="progressFill" class="progress-fill"></div>
+            </div>
+          </div>
+
+          <h2 id="questionText">Select a role and start practicing.</h2>
+
+          <textarea
+            id="answerInput"
+            rows="8"
+            placeholder="Type your response here..."
+          ></textarea>
+
+          <div class="actions">
+            <button id="submitBtn">Submit Answer</button>
+            <button id="prevBtn" class="secondary">Previous</button>
+            <button id="skipBtn" class="secondary">Skip</button>
+          </div>
+        </section>
+
+        <section class="panel feedback">
+          <h3>Feedback</h3>
+          <div id="feedbackBox" class="feedback-box">
+            <p>Your coach feedback will appear here after each answer.</p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
